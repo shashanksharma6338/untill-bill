@@ -1,0 +1,62 @@
+/* Custom styles to complement Tailwind CSS */
+body {
+  font-family: "Inter", sans-serif;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid #e5e7eb;
+}
+
+thead th {
+  background-color: #f3f4f6;
+  font-weight: 600;
+}
+
+tr:hover {
+  background-color: #f9fafb;
+}
+
+input,
+select {
+  transition: all 0.2s ease-in-out;
+}
+
+input:focus,
+select:focus {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+button {
+  transition: all 0.2s ease-in-out;
+}
+
+#alert-container div {
+  animation: slideIn 0.3s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Ensure tables are scrollable on small screens */
+@media (max-width: 640px) {
+  .overflow-x-auto {
+    overflow-x: auto;
+  }
+  table {
+    min-width: 1200px;
+  }
+}
